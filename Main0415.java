@@ -1,3 +1,10 @@
+// 자바 기초 문제 풀이를 처음으로 한날이다 파이썬 이랑 헷갈리기도 하고 아직 미숙해서 생각대로 
+//코드를 잘 짠것같진않다 기초를 다시공부해야할듯;;
+
+
+
+
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;

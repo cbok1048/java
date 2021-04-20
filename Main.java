@@ -1,13 +1,36 @@
 import java.util.*;
 class Main{
+
+
     public static void main(String[] args){
-    Scanner sc = new Scanner(System.in);
-    System.out.println(" 두 자리 정수를 입력해주세요 .>");
-    String input = sc.nextLine();
-    int num = Integer.parseInt(input);
+        int menu =0;
+        int num = 0;
 
-    System.out.println("입력내용 :" + input);
-    System.out.printf("num:%d%n",num);
+        Scanner scanner = new Scanner(System.in);
+        while(ture){
+            System.out.println("(1) square");
+            System.out.println("(2) square root");
+            System.out.println("(3) log");
+            System.out.println("원하는 메뉴 (1-3) 를 선택하세요. (종료:0)>" );
 
-    }
-}
+            String tmp = scanner.nextLine();
+            menu = Integer.parseInt(tmp);
+
+            if(menu ==0) {
+                System.out.println("프로그램을 종료합니다 .");
+                break;
+            }else if (!(1 <= menu && menu <=3 )){
+                System.out.println("메뉴를 잘못 선택하셨습니다(종료는 0)");
+                continue;
+
+            }
+            System.out.println("선택하신 메뉴는 "+ menu + "번입니다.");
+
+        }
+
+
+            }
+        }
+
+
+

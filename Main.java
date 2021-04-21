@@ -1,36 +1,42 @@
-import java.util.*;
-class Main{
-
+class Main {
 
     public static void main(String[] args){
-        int menu =0;
-        int num = 0;
 
-        Scanner scanner = new Scanner(System.in);
-        while(ture){
-            System.out.println("(1) square");
-            System.out.println("(2) square root");
-            System.out.println("(3) log");
-            System.out.println("원하는 메뉴 (1-3) 를 선택하세요. (종료:0)>" );
+        System.out.println("card.width = " + Card.width);
+        System.out.println("card.height = " + Card.width);
 
-            String tmp = scanner.nextLine();
-            menu = Integer.parseInt(tmp);
+        Card c1 = new Card();
+        c1.kind = "Heart";
+        c1.number = 7;
 
-            if(menu ==0) {
-                System.out.println("프로그램을 종료합니다 .");
-                break;
-            }else if (!(1 <= menu && menu <=3 )){
-                System.out.println("메뉴를 잘못 선택하셨습니다(종료는 0)");
-                continue;
-
-            }
-            System.out.println("선택하신 메뉴는 "+ menu + "번입니다.");
-
-        }
-
-
-            }
-        }
+        Card c2 = new Card();
+        c1.kind = "spade";
+        c1.number = 4;
 
 
 
+        System.out.println("c1은"+c1.kind + ","+c1.number
+        +"이며 크기는 ("+c1.height + ")" );
+        
+        System.out.println("c2은"+c2.kind + ","+c2.number
+        +"이며 크기는 ("+c2.height + ")" );
+
+        System.out.println("c1의 width와 height 를 각각 50 , 80 으로 변경합니다.");
+        c1.width = 50;
+        c1.height = 80;
+
+
+        System.out.println("c1은"+c1.kind + ","+c1.number
+        +"이며 크기는 ("+c1.height + ")" );
+        
+        System.out.println("c2은"+c2.kind + ","+c2.number
+        +"이며 크기는 ("+c2.height + ")" );
+
+    }
+}
+class Card {
+    String kind;
+    int number;
+    static int width = 100;
+    static int height = 250;
+}
